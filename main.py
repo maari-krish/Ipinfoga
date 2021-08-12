@@ -7,7 +7,7 @@ print(colored('''
    |    |   |    |      \ |   |       |   |   |         _ \   
    |    ___/     |    |\  |   __|     |   |   |   |    ___ \  
  ___|  _|      ___|  _| \_|  _|      \___/   \____|  _/    _\  
-\n''', "red"))
+\n''', "green"))
 
 print(colored("Coded BY Maari-Krish \n", "green"))
 print("\n")
