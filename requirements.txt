@@ -1,3 +1,0 @@
-json
-urllib.request
-termcolor
