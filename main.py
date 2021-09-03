@@ -1,6 +1,7 @@
 import json
 import urllib.request
 from termcolor import colored
+import webbrowser
 
 print(colored('''                                                                                                                                                                                                                                                                                                                              
  _ # ______  # _ # _______ # _______ # _______ # _______ # _______ #
@@ -43,4 +44,15 @@ print(colored("Currency_name : " + value['currency_name'], "blue"))
 print(colored("Languages : " + value['languages'], "blue"))
 print(colored("ASN : " + value['asn'], "blue"))
 print(colored("Org: " + value['org'], "blue"))
+print(colored("Latitude : {latitude}".format(**value), "blue"))
+print(colored("Longitude : {longitude}".format(**value), "blue"))
+if value['latitude'] and value['longitude']:
+    lats = value['latitude']
+    lons = value['longitude']
+maps_url = "https://maps.google.com/maps?q=%s,+%s" % (lats, lons)
+openWeb = input(colored("Do You Want To Open GPS location in web broser? (Y/N) ","green"))
+if openWeb.upper() == 'Y':
+    webbrowser.open(maps_url, new=2)
+else:
+    pass
 print(colored("---------------------------------------------------------------------------------------------------------------", "green"))
